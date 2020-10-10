@@ -4,17 +4,24 @@
 
   <groupId>ricardomello.desafioqaMobile</groupId>
   <artifactId>DasafioQaMobile</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<version>1.1</version>
+	<packaging>war</packaging>
+	<name>DasafioQaMobile</name>
 
-  <name>DasafioQaMobile</name>
-  <url>http://maven.apache.org</url>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.hibernate>5.1.8.Final</version.hibernate>
+		<version.deltaspike>1.8.0</version.deltaspike>
+		<arquillian.container>wildfly:8.2.0.Final:managed</arquillian.container>
+		<arquillian.port-offset>0</arquillian.port-offset>
+		<arquillian.port>9990</arquillian.port>
+		<arquillian.browser>chrome</arquillian.browser>
+		<db.path>~/db</db.path>
+		<db.name>cars</db.name>
+		<db.username>sa</db.username>
+	</properties>
 
    
   <dependencies>
@@ -97,5 +104,14 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<snapshots/>
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
+	</repositories>
 </project>
 
